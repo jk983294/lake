@@ -13,6 +13,7 @@ yarn add recharts
 
 
 cd lake
+yarn install
 yarn start
 yarn build
 yarn test
