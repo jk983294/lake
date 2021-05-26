@@ -17,10 +17,11 @@ class Programs extends React.Component {
       return (
          <div>
             <h1>programs page</h1>
-            <h1>programs page</h1>
-            <BootstrapTable data={this.state.program_data} trClassName={rowClassNameFormat}>
-               <TableHeaderColumn isKey dataField='name'></TableHeaderColumn>
-               <TableHeaderColumn dataField='status'></TableHeaderColumn>
+            <BootstrapTable data={this.state.program_data} striped
+               options={ { noDataText: 'empty program data' } }
+               trClassName={rowClassNameFormat} version='4'>
+               <TableHeaderColumn isKey dataField='name' dataSort={ true }>Name</TableHeaderColumn>
+               <TableHeaderColumn dataField='status'>Status</TableHeaderColumn>
             </BootstrapTable>
          </div>
       )
