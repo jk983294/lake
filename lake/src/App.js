@@ -1,6 +1,6 @@
 import React from 'react';
 import Main from './components/Main.js';
-import { Container, Row, Col, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
 
 class App extends React.Component {
@@ -12,7 +12,10 @@ class App extends React.Component {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="/">Cash</Nav.Link>
+              <Nav.Link href="/position">Position</Nav.Link>
+              <Nav.Link href="/trades">Trades</Nav.Link>
               <Nav.Link href="/programs">Programs</Nav.Link>
+              <Nav.Link href="/tube">Tube</Nav.Link>
               <Nav.Link href="/about">About</Nav.Link>
             </Nav>
           </Navbar.Collapse>

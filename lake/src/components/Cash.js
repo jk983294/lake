@@ -1,6 +1,6 @@
 import React from 'react';
 import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Label } from 'recharts';
-import moment from 'moment'
+import moment from 'moment';
 
 class Cash extends React.Component {
    constructor(props) {
@@ -24,7 +24,7 @@ class Cash extends React.Component {
             Object.assign({ totals: item, time: data.times[i] / 1000. })));
          let last_ts_ = this.state.last_ts;
          if (data.times.length > 0) {
-            console.log('fetch', data.times.length, data.times[data.times.length - 1]);
+            //console.log('fetch', data.times.length, data.times[data.times.length - 1]);
             last_ts_ = data.times[data.times.length - 1];
          }
 
@@ -59,7 +59,7 @@ class Cash extends React.Component {
                   <Tooltip />
 
                   <XAxis type="number" dataKey="time" domain={['dataMin', 'dataMax']}
-                     tickFormatter={(unixTime) => moment(unixTime).format('h:HH:mm a')}>
+                     tickFormatter={(unixTime) => moment(unixTime).format('HH:mm a')}>
                      <Label
                         value={"Time"}
                         position="bottom"
