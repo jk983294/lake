@@ -19,7 +19,8 @@ class Tube extends React.Component {
          headers: { 'Content-Type': 'application/json' },
          body: JSON.stringify({})
       };
-      const response = await fetch('http://localhost:30010/tube', requestOptions);
+      const url_ = 'http://localhost:' + this.props.global_info.lake_server_port.toString() + '/tube';
+      const response = await fetch(url_, requestOptions);
       const data = await response.json();
       //console.log('fetch', data);
       if (data) {

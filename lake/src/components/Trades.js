@@ -4,7 +4,7 @@ import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import moment from 'moment';
 
 function rowClassNameFormat(row, rowIdx) {
-   return row.Direction == '1' ? 'Green-Row' : 'Red-Row';
+   return row.Direction === '1' ? 'Green-Row' : 'Red-Row';
 }
 
 class Trades extends React.Component {
@@ -20,7 +20,8 @@ class Trades extends React.Component {
          headers: { 'Content-Type': 'application/json' },
          body: JSON.stringify({})
       };
-      const response = await fetch('http://localhost:30010/trades', requestOptions);
+      const url_ = 'http://localhost:' + this.props.global_info.lake_server_port.toString() + '/trades';
+      const response = await fetch(url_, requestOptions);
       const data = await response.json();
       //console.log('fetch', data);
       if (data) {

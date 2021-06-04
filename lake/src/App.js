@@ -15,17 +15,23 @@ class App extends React.Component {
               <Nav.Link href="/position">Position</Nav.Link>
               <Nav.Link href="/trades">Trades</Nav.Link>
               <Nav.Link href="/programs">Programs</Nav.Link>
+              <Nav.Link href="/alpha">Alpha</Nav.Link>
+              <Nav.Link href="/md">MD</Nav.Link>
               <Nav.Link href="/tube">Tube</Nav.Link>
               <Nav.Link href="/about">About</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
 
-        <Main />
+        <Main global_info={this.props.global_info} />
       </Container>
     );
   }
 }
 
-
+App.defaultProps = {
+  global_info: {
+    lake_server_port: 30010
+  }
+}
 export default App;

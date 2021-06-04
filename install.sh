@@ -10,12 +10,14 @@ yarn add bootstrap
 yarn add react-bootstrap
 yarn add recharts
 
-
+# prod depoly
+yarn global add serve
+serve -s /home/kun/github/lake/lake/build
 
 cd lake
 yarn install
 yarn start
-yarn build
+yarn build   // prod build
 yarn test
 yarn eject
 yarn add module_name
