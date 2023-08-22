@@ -8,6 +8,7 @@ import Position from './Position.js';
 import Trades from './Trades.js';
 import Alpha from './Alpha.js';
 import MD from './MD.js';
+import Strats from './Strats.js';
 
 class Main extends React.Component {
     render() {
@@ -23,6 +24,7 @@ class Main extends React.Component {
                             <Route path="/trades" ><Trades global_info={this.props.global_info} /></Route>
                             <Route path="/alpha" ><Alpha global_info={this.props.global_info} /></Route>
                             <Route path="/tube" ><Tube global_info={this.props.global_info} /></Route>
+                            <Route path="/strats" ><Strats global_info={this.props.global_info} /></Route>
                             <Route exact path="/" ><Cash global_info={this.props.global_info} /></Route>
                         </Switch>
                     </div>
