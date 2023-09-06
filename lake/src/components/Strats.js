@@ -57,7 +57,7 @@ class Strats extends React.Component {
       const url_ = 'http://localhost:' + this.props.global_info.lake_server_port.toString() + '/strats';
       const response = await fetch(url_, requestOptions);
       const data = await response.json();
-      console.log('fetch', data);
+      // console.log('fetch', data);
       if (data) {
          this.setState({
             strats_data: data.records
