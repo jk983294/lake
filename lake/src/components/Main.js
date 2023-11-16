@@ -9,6 +9,7 @@ import Trades from './Trades.js';
 import Alpha from './Alpha.js';
 import MD from './MD.js';
 import Strats from './Strats.js';
+import FDStats from './FDStats.js';
 import Jsl from './Jsl.js';
 
 class Main extends React.Component {
@@ -26,6 +27,7 @@ class Main extends React.Component {
                             <Route path="/alpha" ><Alpha global_info={this.props.global_info} /></Route>
                             <Route path="/tube" ><Tube global_info={this.props.global_info} /></Route>
                             <Route path="/strats" ><Strats global_info={this.props.global_info} /></Route>
+                            <Route path="/fdstats" ><FDStats global_info={this.props.global_info} /></Route>
                             <Route path="/jsl" ><Jsl global_info={this.props.global_info} /></Route>
                             <Route exact path="/" ><Cash global_info={this.props.global_info} /></Route>
                         </Switch>

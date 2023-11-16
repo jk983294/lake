@@ -1,11 +1,7 @@
 import React from 'react';
 import '../css/Table.css';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-import moment from 'moment';
 
-function rowClassNameFormat(row, rowIdx) {
-   return row.dir < 0 ? 'Green-Row' : 'Red-Row';
-}
 
 function percentFormatter(cell, row) {
    let val = ((Number.parseFloat(cell) * 100).toFixed(2)).toString() + '%'
@@ -33,15 +29,12 @@ function mainPdtCellFormatter(cell, row) {
 
 function pdtCellFormatter(cell, row) {
    const lets = row.ins.split('.');
-   const pdt_ = lets[0];
    const exch_ = lets[1];
    var _ins = cell.toUpperCase();
-   let mat1 = 0, year1 = 0, month1 = 0;
+   let mat1 = 0;
    if (exch_ === 'CZCE') {
       mat1 = parseInt(_ins.slice(-3));
       var pdt1 = _ins.slice(0, -3);
-      year1 = Math.floor(mat1 / 100);
-      month1 = mat1 % 100;
       var date_ = new Date();
       var year2 = date_.getFullYear() % 100;
       var year2_first = Math.floor(year2 / 10);

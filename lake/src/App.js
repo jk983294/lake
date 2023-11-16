@@ -19,6 +19,7 @@ class App extends React.Component {
               <Nav.Link href="/md">MD</Nav.Link>
               <Nav.Link href="/tube">Tube</Nav.Link>
               <Nav.Link href="/strats">Strats</Nav.Link>
+              <Nav.Link href="/fdstats">FDStats</Nav.Link>
               <Nav.Link href="/jsl">Jsl</Nav.Link>
               <Nav.Link href="/about">About</Nav.Link>
             </Nav>

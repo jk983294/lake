@@ -20,7 +20,7 @@ function intFormatter(cell, row) {
 function linkCellFormatter(cell, row) {
    const words = cell.split('.');
    let val = 'SZ' + words[0];
-   if (words[1] == 'SSE') {
+   if (words[1] === 'SSE') {
       val = 'SH' + words[0];
    }
    var url_1 = `https://xueqiu.com/S/${val}`;
